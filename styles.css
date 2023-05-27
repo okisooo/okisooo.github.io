@@ -48,16 +48,6 @@ h1 {
   margin: 20px 0;
 }
 
-/* Rest of the CSS code */
-
-.social-media-links li {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 24px;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
 
 .social-media-links li:nth-child(1) {
   animation-name: fadeInLeft;
@@ -73,6 +63,23 @@ h1 {
 
 .social-media-links li:nth-child(4) {
   animation-name: fadeInRight;
+}
+
+
+.social-media-links li {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+.social-media-links a {
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social-media-links a:hover {
+  transform: scale(1.2);
 }
 
 @keyframes fadeInLeft {
