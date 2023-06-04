@@ -90,6 +90,9 @@ body {
   transform: rotateX(90deg) translateY(0px);
 }
 
+.inner3 {
+}
+
 .cube .inner {
   border: 6px solid black;
   backface-visibility: visible !important;
