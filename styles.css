@@ -189,7 +189,7 @@ body:after {
   z-index: 1;
 }
 body.is-loading:after {
-  opacity: 0.5;
+  opacity: 1;
   visibility: visible;
 }
 :root {
