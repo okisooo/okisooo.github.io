@@ -691,7 +691,7 @@ hr.style1:before {
   background-size: 512px, cover;
   background-position: center, 0% 0%;
   background-repeat: repeat, repeat;
-  box-shadow: 0rem 4.25rem 6.75rem 1.125rem rgba(48, 51, 66, 0.5);
+  box-shadow: 0rem 4.25rem 6.75rem 1.125rem rgba(150, 94, 182, 0.5);
   border-radius: 2rem;
 }
 #container01 > .wrapper > .inner {
