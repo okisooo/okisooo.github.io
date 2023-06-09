@@ -72,11 +72,15 @@
     'px';};on('load', f);on('orientationchange', f);on('touchmove',
     f);})();$body.classList.add('is-touch');} else if (client.os == 'ios') {if (client.osVersion <= 11)(function()
     {sheet.insertRule('body::after { }', 0);rule = sheet.cssRules[0];rule.style.cssText = '-webkit-transform:
-    scale(1.0)';})();if (client.osVersion <= 11)(function()
-    {sheet.insertRule('body.ios-focus-fix::before { }', 0);rule = sheet.cssRules[0];rule.style.cssText = 'height: calc(100% +
-    60px)';on('focus', function(event) {$body.classList.add('ios-focus-fix');}, true);on('blur',
-    function(event) {$body.classList.remove('ios-focus-fix');},
-    true);})();$body.classList.add('is-touch');}var scrollEvents = {items: [],add: function(o) {this.items.push({element:
+    scale(1.0)';})();
+    if (client.osVersion <= 11)(function()
+    {
+        sheet.insertRule('body.ios-focus-fix::before { }', 0);
+        rule = sheet.cssRules[0];rule.style.cssText = 'height: calc(100% + 60px)';
+        on('focus', function(event) {$body.classList.add('ios-focus-fix');}, true);on('blur', function(event) 
+        {$body.classList.remove('ios-focus-fix');}, true);
+    })();
+    $body.classList.add('is-touch');}var scrollEvents = {items: [],add: function(o) {this.items.push({element:
     o.element,triggerElement: (('triggerElement' in o && o.triggerElement) ? o.triggerElement :
     o.element),enter: ('enter' in o ? o.enter : null),leave: ('leave' in o ? o.leave : null),mode:
     ('mode' in o ? o.mode : 3),offset: ('offset' in o ? o.offset : 0),initialState:
