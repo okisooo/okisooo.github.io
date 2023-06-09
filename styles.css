@@ -165,13 +165,8 @@ body:before {
   transform: scale(1);
   width: 100vw;
   z-index: 0;
-  background-image: radial-gradient(
-      79% 150% at 29% 100%,
-      rgba(135, 92, 161, 0.788) 16%,
-      rgba(66, 95, 199, 0.69) 50%,
-      rgba(0, 148, 255, 0.541) 84%
-    ),
-    url("https://cdn.discordapp.com/attachments/940769878841913355/1116691997533675590/ezgif.com-video-cutter.mp4");
+  background-image:
+    url("https://cdn.discordapp.com/attachments/940769878841913355/1116695215982510120/ezgif.com-video-to-gif_5.gif");
   background-position: 0% 0%, center;
   background-repeat: repeat, no-repeat;
   background-size: cover, cover;
