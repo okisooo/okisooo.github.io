@@ -535,10 +535,10 @@ hr.style1:before {
 }
 #buttons01 .button {
   color: #ffffff;
-  border: solid 2px #896bff;
+  border: solid 2px #ffffff;
 }
 #buttons01 .button svg {
-  fill: #896bff;
+  fill: #ffffff;
 }
 #buttons01 li a:hover {
   transform: scale(1.1125);
@@ -547,7 +547,7 @@ hr.style1:before {
   border: solid 2px #ffffff;
 }
 #buttons01 .n01 svg {
-  fill: #6bc1ff;
+  fill: #ffffff;
 }
 #buttons01 .n02 {
   border: solid 2px #6b9dff;
