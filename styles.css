@@ -687,11 +687,12 @@ hr.style1:before {
   width: 100%;
   align-items: center;
   justify-content: flex-start;
-  background-image: linear-gradient(265deg, rgba(117, 104, 160, 0.5) 33%, rgba(150, 94, 182, 0.5) 78%);
+  background-color: rgba(58, 54, 71, 0.5);
+  background-image: linear-gradient(265deg, #3a3647 0%, #303342 100%);
   background-size: 512px, cover;
   background-position: center, 0% 0%;
   background-repeat: repeat, repeat;
-  box-shadow: 0rem 4.25rem 6.75rem 1.125rem rgba(150, 94, 182, 0.5);
+  box-shadow: 0rem 4.25rem 6.75rem 1.125rem rgba(48, 51, 66, 1);
   border-radius: 2rem;
 }
 #container01 > .wrapper > .inner {
