@@ -1116,15 +1116,14 @@ hr.style1:before {
 
 #audioContainer {
   position: fixed;
-  top: 50%;
+  bottom: 20px;
   right: 20px;
-  transform: translateY(-50%);
 }
 
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #a34caf;
   color: white;
   border: none;
   border-radius: 4px;
@@ -1132,9 +1131,13 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #a0459b;
 }
 
 button:active {
-  background-color: #3e8e41;
+  background-color: #8b3e8e;
+}
+
+input[type="range"] {
+  width: 150px;
 }
