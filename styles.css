@@ -1120,22 +1120,32 @@ hr.style1:before {
   right: 20px;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #a34caf;
-  color: white;
+button#playButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4CAF50;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button:hover {
-  background-color: #a0459b;
+button#playButton i {
+  color: white;
 }
 
-button:active {
-  background-color: #8b3e8e;
+button#playButton i.fa-pause {
+  display: none;
+}
+
+button#playButton.playing i.fa-play {
+  display: none;
+}
+
+button#playButton.playing i.fa-pause {
+  display: inline-block;
 }
 
 input[type="range"] {
