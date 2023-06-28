@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
     audio.volume = volumeBar.value;
   });
 
-  // Auto-play on startup
-  audio.play();
+  // Set initial volume from the volume bar value
+  audio.volume = volumeBar.value;
+  
+  // Remove autoplay attempt for compatibility
+  button.style.display = "block";
 });
