@@ -1120,6 +1120,11 @@ hr.style1:before {
   right: 20px;
 }
 
+.controls {
+  display: flex;
+  align-items: center;
+}
+
 button#playButton {
   width: 50px;
   height: 50px;
@@ -1130,6 +1135,7 @@ button#playButton {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 10px;
 }
 
 button#playButton i {
@@ -1151,4 +1157,5 @@ button#playButton.playing i.fa-pause {
 input[type="range"] {
   width: 150px;
 }
+
 

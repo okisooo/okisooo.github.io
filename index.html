@@ -274,12 +274,13 @@
           </div>
           <div id="audioContainer">
             <audio id="myAudio" src="your-audio-source.mp3"></audio>
-            <button id="playButton" onclick="toggleAudio()">
-              <i id="playIcon" class="fas fa-play"></i>
-              <i id="pauseIcon" class="fas fa-pause"></i>
-            </button>
-            <input id="volumeBar" type="range" min="0" max="1" step="0.01" value="1">
-          </div>
+            <div class="controls">
+              <button id="playButton" onclick="toggleAudio()">
+                <i id="playIcon" class="fas fa-play"></i>
+                <i id="pauseIcon" class="fas fa-pause"></i>
+              </button>
+              <input id="volumeBar" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
         </div>
       </div>
     </div>

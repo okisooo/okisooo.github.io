@@ -3,17 +3,17 @@ document.addEventListener("DOMContentLoaded", function() {
   var button = document.getElementById("playButton");
   var volumeBar = document.getElementById("volumeBar");
 
-  button.addEventListener("click", function() {
+  function toggleAudio() {
     if (audio.paused) {
       audio.play();
-      button.textContent = "Pause";
-      audio.loop = true; // Set the loop property to true
+      button.classList.add("playing");
     } else {
       audio.pause();
-      button.textContent = "Play";
-      audio.loop = false; // Set the loop property to false
+      button.classList.remove("playing");
     }
-  });
+  }
+
+  button.addEventListener("click", toggleAudio);
 
   volumeBar.addEventListener("input", function() {
     audio.volume = volumeBar.value;
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Set initial volume from the volume bar value
   audio.volume = volumeBar.value;
-  
+
   // Remove autoplay attempt for compatibility
   button.style.display = "block";
 });
