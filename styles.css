@@ -1150,12 +1150,18 @@ button:active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
   button {
     /* Adjust the styles for mobile */
     font-size: 16px;
     padding: 8px;
+  }
+  
+  /* Hide the input bar on mobile */
+  #volumeBar {
+    display: none;
   }
 }
 
