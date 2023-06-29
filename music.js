@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if (audio.paused) {
       audio.play();
       button.classList.add("playing");
+      audio.loop = true;
     } else {
       audio.pause();
       button.classList.remove("playing");
+      audio.loop = false;
     }
   }
 
