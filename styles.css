@@ -165,13 +165,19 @@ body:before {
   transform: scale(1);
   width: 100vw;
   z-index: 0;
-  background-image:
-    url("https://cdn.discordapp.com/attachments/940769878841913355/1123418060309667861/tumblr_36713ebce40899ee4a8f85b7dfb07f55_36f48faf_400.gif");
-  background-position: 0% 0%, center;
-  background-repeat: repeat, no-repeat;
-  background-size: cover, cover;
   background-color: #ffffff;
 }
+
+#backgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 body:after {
   background-color: #44436e;
   content: "";
