@@ -1123,10 +1123,11 @@ hr.style1:before {
   gap: 10px;
 }
 
+/* Common styles for both mobile and PC */
 button {
   padding: 10px;
   font-size: 20px;
-  background-color: #af4c72;
+  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 50%;
@@ -1135,13 +1136,13 @@ button {
 }
 
 button:hover {
-  background-color: #6e2768;
+  background-color: #45a049;
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 button.playing {
-  background-color: #3678f4;
+  background-color: #f44336;
 }
 
 button:active {
@@ -1149,29 +1150,12 @@ button:active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-
-input[type="range"] {
-  -webkit-appearance: none;
-  width: 100px;
-  height: 4px;
-  background-color: #220404;
-  outline: none;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 10px;
-  background-color: #f061e4;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* Hide volume input bar on mobile devices */
-@media (max-width: 768px) {
-  input[type="range"] {
-    display: none;
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  button {
+    /* Adjust the styles for mobile */
+    font-size: 16px;
+    padding: 8px;
   }
 }
 
