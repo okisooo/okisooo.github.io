@@ -153,6 +153,7 @@ body {
   overflow-x: hidden;
   word-wrap: break-word;
 }
+
 body:before {
   content: "";
   display: block;
@@ -177,6 +178,17 @@ body:before {
   object-fit: cover;
   z-index: -1;
 }
+
+@media (max-width: 768px) {
+  #backgroundVideo {
+    object-fit: initial;
+    width: auto;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 
 body:after {
   background-color: #44436e;
