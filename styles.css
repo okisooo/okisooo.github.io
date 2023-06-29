@@ -1118,40 +1118,23 @@ hr.style1:before {
   position: fixed;
   bottom: 20px;
   right: 20px;
-}
-
-.controls {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
-button#playButton {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #534caf;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-}
-
-button#playButton i {
+button {
+  padding: 10px;
+  font-size: 20px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-button#playButton i.fa-pause {
-  display: none;
-}
-
-button#playButton.playing i.fa-play {
-  display: none;
-}
-
-button#playButton.playing i.fa-pause {
-  display: inline-block;
+button.playing {
+  background-color: #f44336;
 }
 
 input[type="range"] {
@@ -1167,7 +1150,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 10px;
   height: 10px;
-  background-color: #e03838;
+  background-color: #4CAF50;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -1178,3 +1161,4 @@ input[type="range"]::-webkit-slider-thumb {
     display: none;
   }
 }
+
