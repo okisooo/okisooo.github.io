@@ -1126,7 +1126,7 @@ hr.style1:before {
 button {
   padding: 10px;
   font-size: 20px;
-  background-color: #4CAF50;
+  background-color: #af4c72;
   color: white;
   border: none;
   border-radius: 50%;
@@ -1135,13 +1135,13 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #6e2768;
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 button.playing {
-  background-color: #f44336;
+  background-color: #3678f4;
 }
 
 button:active {
