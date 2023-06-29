@@ -1157,3 +1157,20 @@ button#playButton.playing i.fa-pause {
 input[type="range"] {
   width: 150px;
 }
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Hide volume input bar on mobile devices */
+@media (max-width: 768px) {
+  input[type="range"] {
+    display: none;
+  }
+}
