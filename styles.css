@@ -1155,7 +1155,11 @@ button#playButton.playing i.fa-pause {
 }
 
 input[type="range"] {
-  width: 150px;
+  -webkit-appearance: none;
+  width: 100px;
+  height: 4px;
+  background-color: #ddd;
+  outline: none;
 }
 
 input[type="range"]::-webkit-slider-thumb {
