@@ -22,4 +22,4 @@ volumeBar.addEventListener("input", function() {
 audio.volume = volumeBar.value;
 
 // Remove autoplay attempt for compatibility
-button.style.display = "block";
+button.style.display = "block"; 
