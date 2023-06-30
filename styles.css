@@ -1170,14 +1170,5 @@ button:active {
   #volumeBar {
     display: none;
   }
-
-    #backgroundVideo {
-      object-fit: initial;
-      width: auto;
-      height: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-
 }
+
