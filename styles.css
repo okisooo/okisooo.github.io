@@ -179,17 +179,6 @@ body:before {
   z-index: -1;
 }
 
-@media (max-width: 768px) {
-  #backgroundVideo {
-    object-fit: initial;
-    width: auto;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-
 body:after {
   background-color: #44436e;
   content: "";
@@ -1181,5 +1170,16 @@ button:active {
   #volumeBar {
     display: none;
   }
+
+  @media (max-width: 768px) {
+    #backgroundVideo {
+      object-fit: initial;
+      width: auto;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
 }
 
