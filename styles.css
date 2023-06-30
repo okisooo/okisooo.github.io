@@ -1158,26 +1158,26 @@ button:active {
 }
 
 
-/* Media query for responsive styles */
-@media screen {
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
   button {
-    /* Adjust the styles for any screen size */
+    /* Adjust the styles for mobile */
     font-size: 16px;
     padding: 8px;
   }
   
-  /* Hide the input bar on smaller screens */
-  @media screen and (max-width: 768px) {
-    #volumeBar {
-      display: none;
-    }
+  /* Hide the input bar on mobile */
+  #volumeBar {
+    display: none;
   }
 
-  #backgroundVideo {
-    object-fit: initial;
-    width: auto;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    #backgroundVideo {
+      object-fit: initial;
+      width: auto;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
 }
