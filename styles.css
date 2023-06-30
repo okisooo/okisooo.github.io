@@ -1171,7 +1171,6 @@ button:active {
     display: none;
   }
 
-  @media (max-width: 768px) {
     #backgroundVideo {
       object-fit: initial;
       width: auto;
@@ -1179,7 +1178,7 @@ button:active {
       left: 50%;
       transform: translateX(-50%);
     }
-  }
-  
+
+
 }
 
