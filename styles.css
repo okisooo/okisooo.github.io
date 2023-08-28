@@ -632,9 +632,6 @@ hr.style1:before {
 #icons01 li a:hover + svg {
   transform: scale(1.2);
 }
-#icons01 .n01 svg {
-  fill: #ffa9e9 !important;
-}
 #icons01 .n01 {
   fill: #e09dff !important;
   border: solid 2px #f4a5ff !important;
