@@ -476,7 +476,7 @@ hr.style1:not(:last-child) {
 }
 hr.style1:before {
   width: 100%;
-  border-top: solid 2px rgba(255, 255, 255, 0.031);
+  border-top: solid 2px rgb(255, 145, 250);
   height: 2px;
   margin-top: -1px;
 }
