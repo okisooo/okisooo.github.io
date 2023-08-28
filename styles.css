@@ -541,20 +541,14 @@ hr.style1:before {
   overflow: hidden;
 }
 #buttons01 .button {
-  color: #ffffff;
-  border: solid 2px #ffffff;
-}
-#buttons01 .button svg {
-  fill: #ffffff;
+  color: #ff8cf0;
+  border: solid 2px #e990ff;
 }
 #buttons01 li a:hover {
   transform: scale(1.1125);
 }
 #buttons01 .n01 {
-  border: solid 2px #ffffff;
-}
-#buttons01 .n01 svg {
-  fill: #ffffff;
+  border: solid 2px #f293ff;
 }
 #buttons01 .n02 {
   border: solid 2px #6b9dff;
