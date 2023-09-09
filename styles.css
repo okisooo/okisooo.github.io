@@ -4,15 +4,20 @@ body, html {
   padding: 0;
 }
 
-/* Style the video container */
 #video-container {
-  position: fixed;
+  position: relative;
+}
+
+/* Add a pseudo-element for the shadow effect */
+#video-container::before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+  z-index: 1; /* Ensure it's below the video */
 }
 
 /* Style the video to cover the entire background */
