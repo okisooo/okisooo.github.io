@@ -22,28 +22,18 @@ video {
   height: 100%;
 }
 
-/* Style the social links container */
 #social-links {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  bottom: 20px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+  transform: translateX(-50%);
+  z-index: 9999;
 }
 
-/* Style the social media icons */
+/* Adjust the position of individual social icons if needed */
 .social-icon {
-  display: inline-block;
-  margin: 10px;
-  font-size: 30px;
-  color: #fff; /* White icon color */
-  text-decoration: none;
-  transition: color 0.3s ease;
+  margin: 0 10px; /* Add some horizontal spacing between icons */
 }
-
 /* Change icon color on hover */
 .social-icon:hover {
   color: #ff00ff; /* Pink icon color */
