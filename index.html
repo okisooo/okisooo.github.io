@@ -3,24 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Your Futuristic Space Website</title>
+    <title>oxo</title>
+    <style>
+        /* Styling for the overlay content */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: #fff; /* Text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the YouTube video container */
+        #youtube-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place it behind the overlay */
+        }
+    </style>
 </head>
 <body>
-    <div id="video-container">
-        <video autoplay loop muted>
-            <!-- Add your video source here -->
-            <source src="your-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- YouTube Video Container -->
+    <div id="youtube-video"></div>
+
+    <!-- Overlay Content -->
+    <div class="overlay">
+        <h1>oxonet.me</h1>
+        <p>Welcome!</p>
     </div>
-    <div id="social-links">
-        <!-- Add your social media links and icons here -->
-        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <!-- Add more social icons as needed -->
-    </div>
-    <script src="script.js"></script>
+
+    <!-- JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        // Replace VIDEO_ID with the actual YouTube video ID
+        var videoId = "ObUZBy7zWrc";
+
+        // The API will call this function when the video player is ready
+        function onYouTubeIframeAPIReady() {
+            new YT.Player('youtube-video', {
+                videoId: videoId,
+                playerVars: {
+                    autoplay: 1, // Auto-play the video
+                    controls: 0, // Hide video controls
+                    showinfo: 0, // Hide video title and info
+                    modestbranding: 1, // Hide YouTube logo
+                    loop: 1, // Loop the video
+                    playlist: videoId, // Required for loop to work
+                    fs: 0, // Hide fullscreen button
+                    cc_load_policy: 0, // Disable captions
+                    iv_load_policy: 3, // Disable video annotations
+                    autohide: 0, // Disable video controls autohide
+                    enablejsapi: 1 // Enable JavaScript API
+                },
+                events: {
+                    onReady: function (event) {
+                        event.target.playVideo(); // Auto-play the video with sound
+                    },
+                },
+            });
+        }
+    </script>
 </body>
 </html>
