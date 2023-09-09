@@ -48,3 +48,12 @@ video {
 .social-icon:hover {
   color: #ff00ff; /* Pink icon color */
 }
+
+
+/* Add this CSS to your existing styles.css file */
+#unmute-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+}
