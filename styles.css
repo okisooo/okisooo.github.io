@@ -71,13 +71,15 @@ body {
   transform: translate(-50%, -50%);
   z-index: 9999;
   text-align: center;
-  color: #ffffff;
+  color: #800080; /* Purple color */
   font-size: 48px;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 0px 20px rgba(128, 0, 128, 0.5); /* Strong blurry shadow */
+  font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with your preferred font */
   opacity: 0; /* Set initial opacity to 0 */
   animation: fadeinout 3s linear 3s forwards;
 }
+
 
 @keyframes fadeinout {
   0% { opacity: 0; } /* Start with 0 opacity (hidden) */
