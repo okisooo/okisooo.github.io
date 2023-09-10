@@ -1,20 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the video element and audio context
+    // Get the video element
     const video = document.getElementById('background-video');
-    let audioContext; // Declare audioContext variable
-    let gainNode; // Declare gainNode variable for volume control
 
     // Get the unmute button
     const unmuteButton = document.getElementById('unmute-button');
 
+    let audioContext; // Declare audioContext variable
+    let gainNode; // Declare gainNode variable for volume control
+
     // Flag to track mute/unmute state
     let isMuted = true;
 
-    // Add a click event listener to the mute/unmute button
+    // Add a click event listener to the unmute button
     unmuteButton.addEventListener('click', () => {
         if (isMuted) {
             // Mute immediately
             video.muted = true;
+            if (gainNode) {
+                // If gainNode exists (audio is currently fading in), cancel the fade-in
+                gainNode.gain.cancelScheduledValues(audioContext.currentTime);
+            }
         } else {
             // Unmute with fade effect
             if (!audioContext) {
@@ -24,22 +29,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 gainNode.connect(audioContext.destination); // Connect gain node to audio context
             }
 
-            if (audioContext.state === 'suspended') {
-                audioContext.resume();
-            }
-
             // Gradually increase the gain (volume) over 0.5 seconds
             const fadeDuration = 0.5; // seconds
-            const currentTime = audioContext.currentTime;
 
-            // Start with the gain at 0
-            gainNode.gain.setValueAtTime(0, currentTime);
+            gainNode.gain.setValueAtTime(0, audioContext.currentTime); // Start with the gain at 0
 
-            // Linearly ramp the gain to 1 (full volume) over the specified duration
-            gainNode.gain.linearRampToValueAtTime(1, currentTime + fadeDuration);
+            gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + fadeDuration); // Linearly ramp the gain to 1 (full volume)
 
             // Connect the video's audio to the gain node
-            video.audioTracks[0].setSinkId(gainNode);
+            video.setSinkId(gainNode);
 
             // Unmute the video
             video.muted = false;
