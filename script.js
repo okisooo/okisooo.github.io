@@ -7,10 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add a click event listener to the unmute button
     unmuteButton.addEventListener('click', () => {
-        // Check if the video is muted
+        // Toggle the video's muted state
+        video.muted = !video.muted;
+
+        // Update the button text based on the muted state
         if (video.muted) {
-            // Unmute the video
-            video.muted = false;
+            unmuteButton.textContent = 'Unmute';
+        } else {
+            unmuteButton.textContent = 'Mute';
         }
     });
 });
