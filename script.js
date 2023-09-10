@@ -1,5 +1,5 @@
 // Get the video element
-const video = document.getElementById('bg-video');
+const video = document.getElementById('background-video');
 
 // Get the unmute button
 const unmuteButton = document.getElementById('unmute-button');
