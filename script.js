@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             gainNode.gain.linearRampToValueAtTime(1, currentTime + fadeDuration);
 
             // Connect the video's audio to the gain node
-            video.setSinkId(gainNode);
+            video.audioTracks[0].setSinkId(gainNode);
 
             // Unmute the video
             video.muted = false;
