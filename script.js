@@ -47,6 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hide the text after another delay
     setTimeout(() => {
         fadingText.style.opacity = '0';
+        
+        // Remove the text element from the DOM after it fades out
+        setTimeout(() => {
+            fadingText.style.display = 'none';
+        }, 6000); 
     }, 6000); // Hide after 6 seconds
     
 
