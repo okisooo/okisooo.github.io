@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (video.muted) {
             // Unmute the video
             video.muted = false;
-            unmuteButton.style.display = 'none'; // Hide the unmute button
         }
     });
 });
