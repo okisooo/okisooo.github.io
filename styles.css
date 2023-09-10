@@ -52,6 +52,9 @@ video {
   align-items: center;
   box-shadow: 0px 0px 5px rgba(255, 0, 255, 0.5);
   font-family: "Font Awesome 5 Free"; /* Use Font Awesome's font */
+  text-align: center; /* Center the icon within the circle */
+  line-height: 48px; /* Center vertically */
+  font-size: 24px; /* Adjust the font size as needed */
 }
 
 /* Change icon color on hover */
