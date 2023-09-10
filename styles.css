@@ -17,7 +17,7 @@ body, html {
   right: 0;
   bottom: 0;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
-  z-index: 1; /* Ensure it's below the video */
+  z-index: 1;
 }
 
 /* Style the video to cover the entire background */
@@ -27,35 +27,22 @@ video {
   height: 100%;
 }
 
-#social-links {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9999;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 /* Change the font to one with even spacing (e.g., Font Awesome's font) */
 .social-icon {
   color: #ce14ce;
   margin: 0 10px;
-  width: 48px; /* Adjust the width and height as needed */
+  width: 48px;
   height: 48px;
   border: 2px solid #751d75;
   border-radius: 50%;
-  display: inline-block;
+  display: inline-flex; /* Use inline-flex to center vertically and horizontally */
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 5px rgba(255, 0, 255, 0.5);
-  font-family: "Font Awesome 5 Free"; /* Use Font Awesome's font */
-  text-align: center; /* Center the icon within the circle */
-  line-height: 48px; /* Center vertically */
-  font-size: 24px; /* Adjust the font size as needed */
-  vertical-align: middle; /* Align icons vertically in the middle of the circle */
+  font-family: "Font Awesome 6 Free"; /* Use Font Awesome 6's font */
+  font-size: 24px;
+  vertical-align: middle;
+  text-decoration: none; /* Remove underline from links */
 }
 
 /* Change icon color on hover */
@@ -74,11 +61,10 @@ video {
 
 /* Create a container for the social icons and align them horizontally */
 #social-icons-container {
-  text-align: center;
-  white-space: nowrap; /* Prevent icons from wrapping to the next line */
-}
-
-/* Adjust spacing between social icons */
-#social-icons-container .social-icon {
-  margin: 0 10px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  white-space: nowrap;
 }
