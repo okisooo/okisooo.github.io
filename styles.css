@@ -64,6 +64,19 @@ body {
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Adjust the shadow on hover */
 }
 
+#fading-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  text-align: center;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadein 2s;
+}
 
 footer {
   position: fixed;
