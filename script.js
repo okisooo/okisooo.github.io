@@ -16,10 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isMuted) {
             // Mute immediately
             video.muted = true;
-            if (gainNode) {
-                // If gainNode exists (audio is currently fading in), cancel the fade-in
-                gainNode.gain.cancelScheduledValues(audioContext.currentTime);
-            }
         } else {
             // Unmute with fade effect
             if (!audioContext) {
@@ -37,7 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
             gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + fadeDuration); // Linearly ramp the gain to 1 (full volume)
 
             // Connect the video's audio to the gain node
-            video.setSinkId(gainNode);
+            const videoAudio = video.captureStream().getAudioTracks()[0];
+            const audioSource = audioContext.createMediaStreamSource(new MediaStream([videoAudio]));
+            audioSource.connect(gainNode);
 
             // Unmute the video
             video.muted = false;
