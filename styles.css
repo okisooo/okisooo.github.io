@@ -50,6 +50,7 @@ body {
 
 /* Make the social icons bigger and add a shadow */
 .social-icon {
+  color: #bb10bb;
   margin: 0 20px; /* Increase horizontal spacing between icons */
   font-size: 24px; /* Adjust the font size to make icons bigger */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
@@ -58,7 +59,7 @@ body {
 
 /* Change icon color on hover */
 .social-icon:hover {
-  color: #ff00ff; /* Pink icon color on hover */
+  color: #881988; /* Pink icon color on hover */
   transform: scale(1.2); /* Add a scaling effect on hover */
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Adjust the shadow on hover */
 }
