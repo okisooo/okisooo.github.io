@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add a click event listener to the unmute button
     unmuteButton.addEventListener('click', () => {
         if (isMuted) {
+            // Unmute immediately
+            video.muted = false; // Set video.muted to false to unmute
+        } else {
             // Mute immediately
             video.muted = true;
-        } else {
-            // Unmute immediately
-            video.muted = false;
         }
 
         // Toggle mute state
