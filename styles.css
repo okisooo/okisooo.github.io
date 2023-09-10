@@ -64,11 +64,21 @@ video {
   box-shadow: 0px 0px 10px rgba(255, 0, 157, 0.8);
 }
 
-
 /* Add this CSS to your existing styles.css file */
 #unmute-button {
   position: fixed;
   top: 10px;
   right: 10px;
   z-index: 9999;
+}
+
+/* Create a container for the social icons and align them horizontally */
+#social-icons-container {
+  text-align: center;
+  white-space: nowrap; /* Prevent icons from wrapping to the next line */
+}
+
+/* Adjust spacing between social icons */
+#social-icons-container .social-icon {
+  margin: 0 10px;
 }
