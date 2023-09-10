@@ -36,9 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Update the button text
         updateButtonText();
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
+
     const fadeText = document.getElementById('fade-text');
     
     setTimeout(() => {
@@ -48,4 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
         fadeText.style.opacity = '0'; // Fade out
     }, 6000); // Hide after 6 seconds
+
 });
+
+
