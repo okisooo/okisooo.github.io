@@ -84,6 +84,12 @@ body {
   0% {
     opacity: 0;
   }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
   }
@@ -93,7 +99,13 @@ body {
   0% {
     font-size: 72px; /* Initial large font size */
   }
+  25% {
+    font-size: 72px; /* Initial large font size */
+  }
   50% {
+    font-size: 48px; /* Medium font size */
+  }
+  75% {
     font-size: 48px; /* Medium font size */
   }
   100% {
