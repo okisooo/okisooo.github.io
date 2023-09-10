@@ -8,6 +8,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Flag to track mute/unmute state
     let isMuted = true;
 
+    // Function to update the button text
+    function updateButtonText() {
+        if (isMuted) {
+            unmuteButton.innerText = 'Unmute';
+        } else {
+            unmuteButton.innerText = 'Mute';
+        }
+    }
+
+    // Initial text setup
+    updateButtonText();
+
     // Add a click event listener to the unmute button
     unmuteButton.addEventListener('click', () => {
         if (isMuted) {
@@ -20,5 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Toggle mute state
         isMuted = !isMuted;
+
+        // Update the button text
+        updateButtonText();
     });
 });
