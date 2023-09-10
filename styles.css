@@ -76,7 +76,14 @@ body {
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   opacity: 0; /* Set initial opacity to 0 */
-  animation: fadein 2s;
+  animation: fadeinout 3s linear 3s forwards;
+}
+
+@keyframes fadeinout {
+  0% { opacity: 0; } /* Start with 0 opacity (hidden) */
+  10% { opacity: 1; } /* Quickly fade in to full opacity */
+  90% { opacity: 1; } /* Hold full opacity */
+  100% { opacity: 0; } /* Fade out to 0 opacity (hidden) */
 }
 
 
