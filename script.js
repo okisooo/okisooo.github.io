@@ -5,15 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get the unmute button
     const unmuteButton = document.getElementById('unmute-button');
 
-    // Initialize the button text based on the initial muted state
-    unmuteButton.textContent = video.muted ? 'Unmute' : 'Mute';
-
     // Add a click event listener to the unmute button
     unmuteButton.addEventListener('click', () => {
-        // Toggle the video's muted state
-        video.muted = !video.muted;
-
-        // Update the button text based on the muted state
-        unmuteButton.textContent = video.muted ? 'Unmute' : 'Mute';
+        // Check if the video is muted
+        if (video.muted) {
+            // Unmute the video
+            video.muted = false;
+            unmuteButton.textContent = 'Mute';
+        } else {
+            // Mute the video
+            video.muted = true;
+            unmuteButton.textContent = 'Unmute';
+        }
     });
 });
