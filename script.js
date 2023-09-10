@@ -37,12 +37,20 @@ document.addEventListener('DOMContentLoaded', function () {
         updateButtonText();
     });
 
-    const fadingText = document.getElementById('fading-text');  
-    setTimeout(function(){ fadingText.style.opacity = "1"; }    , 3000);        
-    setTimeout(function(){ fadingText.style.opacity = "0"; }    , 6000);    
-    setTimeout(function(){ fadingText.style.display = "none"; }    , 7000);
+    const fadingText = document.getElementById('fading-text');
 
+    // Show the text after a delay
+    setTimeout(() => {
+        fadingText.style.animation = 'fadeinout 6s cubic-bezier(0.77, 0, 0.175, 1) 3s forwards, sizechange 6s cubic-bezier(0.77, 0, 0.175, 1) 3s both';
+    }, 3000); // Show after 3 seconds
     
+    // Hide the text after another delay
+    setTimeout(() => {
+        fadingText.style.animation = 'fadeinout 6s cubic-bezier(0.77, 0, 0.175, 1) reverse 3s forwards, sizechange 6s cubic-bezier(0.77, 0, 0.175, 1) reverse 3s both';
+    }, 6000); // Hide after 6 seconds
+    
+
+
 });
 
 
