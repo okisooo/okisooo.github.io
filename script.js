@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function(){ fadingText.style.opacity = "1"; }    , 3000);        
     setTimeout(function(){ fadingText.style.opacity = "0"; }    , 6000);    
     setTimeout(function(){ fadingText.style.display = "none"; }    , 7000);
+
+    
 });
 
 

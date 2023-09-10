@@ -75,8 +75,10 @@ body {
   font-size: 48px;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0; /* Set initial opacity to 0 */
   animation: fadein 2s;
 }
+
 
 footer {
   position: fixed;
