@@ -38,16 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    const fadeText = document.getElementById('fade-text');
-    
-    setTimeout(() => {
-        fadeText.style.opacity = '1'; // Fade in
-    }, 3000); // Show after 3 seconds
-
-    setTimeout(() => {
-        fadeText.style.opacity = '0'; // Fade out
-    }, 6000); // Hide after 6 seconds
-
 });
 
 

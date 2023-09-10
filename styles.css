@@ -64,33 +64,6 @@ body {
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Adjust the shadow on hover */
 }
 
-#centered-text {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  display: none; /* Initially hidden */
-}
-
-/* CSS for the fading text */
-#fade-text {
-  display: none; /* Initially hide the text */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 48px; /* Adjust the font size as needed */
-  opacity: 0; /* Start with opacity 0 for the fade-in effect */
-  transition: opacity 1.5s ease; /* Apply a smooth opacity transition over 1.5 seconds */
-}
-
-
-@keyframes fade {
-  0%, 100% { opacity: 0; } /* Start and end with 0 opacity (hidden) */
-  50% { opacity: 1; } /* Middle with full opacity (visible) */
-}
-
 
 footer {
   position: fixed;
