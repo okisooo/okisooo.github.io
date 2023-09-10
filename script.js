@@ -38,15 +38,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Get the text element
-const fadeText = document.getElementById('fade-text');
+document.addEventListener('DOMContentLoaded', function () {
+    const fadeText = document.getElementById('fade-text');
+    
+    setTimeout(() => {
+        fadeText.style.opacity = '1'; // Fade in
+    }, 3000); // Show after 3 seconds
 
-// Show the text after a delay
-setTimeout(() => {
-    fadeText.style.display = 'block';
-}, 3000); // Show after 3 seconds (3000 milliseconds)
-
-// Hide the text after another delay
-setTimeout(() => {
-    fadeText.style.display = 'none';
-}, 6000); // Hide after 6 seconds (3 seconds after showing)
+    setTimeout(() => {
+        fadeText.style.opacity = '0'; // Fade out
+    }, 6000); // Hide after 6 seconds
+});
