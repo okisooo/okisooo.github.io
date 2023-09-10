@@ -24,7 +24,7 @@ body {
     object-fit: cover;
     object-position: center; /* Center the video within the viewport */
   }
-}
+
 
 /* Style the unmute button */
 #unmute-button {
