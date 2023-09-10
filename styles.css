@@ -108,4 +108,23 @@ footer {
 }
 
 
+@media screen and (max-width: 767px) {
+  #video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% viewport width */
+    height: 100vh; /* 100% viewport height */
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  #background-video {
+    width: 100%; /* Fill the entire viewport width */
+    height: 100%; /* Fill the entire viewport height */
+    object-fit: cover;
+    object-position: center; /* Center the video within the viewport */
+  }
+}
+
 
