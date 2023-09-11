@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get the unmute button
     const unmuteButton = document.getElementById('unmute-button');
 
+    // Get the fading text element
+    const fadingText = document.getElementById('fading-text');
+
     // Flag to track mute/unmute state
     let isMuted = true;
 
@@ -19,6 +22,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initial text setup
     updateButtonText();
+
+    // Function to fade in the text
+    function fadeInText() {
+        fadingText.style.opacity = '1';
+    }
+
+    // Function to fade out and remove the text
+    function fadeOutText() {
+        fadingText.style.opacity = '0';
+        
+        // Remove the text element from the DOM after it fades out
+        setTimeout(() => {
+            fadingText.style.display = 'none';
+        }, 3000); // Hide after 3 seconds
+    }
 
     // Add a click event listener to the unmute button
     unmuteButton.addEventListener('click', () => {
@@ -37,25 +55,13 @@ document.addEventListener('DOMContentLoaded', function () {
         updateButtonText();
     });
 
-    const fadingText = document.getElementById('fading-text');
-
     // Show the text after a delay
     setTimeout(() => {
-        fadingText.style.opacity = '1';
+        fadeInText();
     }, 3000); // Show after 3 seconds
     
     // Hide the text after another delay
     setTimeout(() => {
-        fadingText.style.opacity = '0';
-        
-        // Remove the text element from the DOM after it fades out
-        setTimeout(() => {
-            fadingText.style.display = 'none';
-        }, 6000); 
+        fadeOutText();
     }, 6000); // Hide after 6 seconds
-    
-
-
 });
-
-
