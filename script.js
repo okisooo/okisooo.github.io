@@ -63,5 +63,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hide the text after another delay
     setTimeout(() => {
         fadeOutText();
-    }, 7000); //
+    }, 6000); //
 });
