@@ -52,16 +52,17 @@ document.addEventListener('DOMContentLoaded', function () {
         updateButtonText();
     });
 
-    // Add an event listener to start fading when the video can play through
-    video.addEventListener('canplaythrough', function () {
-        // Show the text after a delay
-        setTimeout(() => {
-            fadeInText();
-        }, 7000); // 
+
+video.addEventListener('loadeddata', function () {
+    // Show the text after a delay
+    setTimeout(() => {
+        fadeInText();
+    }, 7000); // 
     
-        // Hide the text after another delay
-        setTimeout(() => {
-            fadeOutText();
-        }, 9000); //
-    });
+    // Hide the text after another delay
+    setTimeout(() => {
+        fadeOutText();
+    }, 9000); //
+});
+
 });
