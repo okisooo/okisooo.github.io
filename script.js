@@ -58,10 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Show the text after a delay
     setTimeout(() => {
         fadeInText();
-    }, 3000); // Show after 3 seconds
+    }, 4000); // 
     
     // Hide the text after another delay
     setTimeout(() => {
         fadeOutText();
-    }, 6000); // Hide after 6 seconds
+    }, 7000); //
 });
