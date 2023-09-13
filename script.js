@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Remove the text element from the DOM after it fades out
         setTimeout(() => {
             fadingText.style.display = 'none';
-        }, 4000); //
+        }, 6000); //
     }
 
     // Add a click event listener to the unmute button
