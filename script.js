@@ -20,9 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Initial text setup
-    updateButtonText();
-
     // Function to fade in the text
     function fadeInText() {
         fadingText.style.opacity = '1';
@@ -55,13 +52,16 @@ document.addEventListener('DOMContentLoaded', function () {
         updateButtonText();
     });
 
-    // Show the text after a delay
-    setTimeout(() => {
-        fadeInText();
-    }, 7000); // 
+    // Add an event listener to start fading when the video can play through
+    video.addEventListener('canplaythrough', function () {
+        // Show the text after a delay
+        setTimeout(() => {
+            fadeInText();
+        }, 7000); // 
     
-    // Hide the text after another delay
-    setTimeout(() => {
-        fadeOutText();
-    }, 9000); //
+        // Hide the text after another delay
+        setTimeout(() => {
+            fadeOutText();
+        }, 9000); //
+    });
 });
