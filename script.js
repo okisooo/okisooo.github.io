@@ -20,26 +20,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Function to fade in the text
-    function fadeInText() {
-        fadingText.style.opacity = '1';
-    }
-
-    // Function to fade out and remove the text
-    function fadeOutText() {
+    // Function to animate the fading text
+    function animateText() {
+        // Set the initial styles
         fadingText.style.opacity = '0';
-        
-        // Remove the text element from the DOM after it fades out
+        fadingText.style.textShadow = '0px 0px 20px rgba(128, 0, 128, 0.5)';
+        fadingText.style.fontSize = '72px';
+        fadingText.style.transition = 'opacity 1s ease, font-size 3s ease';
+
+        // Start the animation
         setTimeout(() => {
-            fadingText.style.display = 'none';
-        }, 6000); //
+            fadingText.style.opacity = '1';
+            fadingText.style.fontSize = '48px';
+        }, 3000); // Fade in and change font size after 3 seconds
+
+        setTimeout(() => {
+            fadingText.style.fontSize = '24px';
+        }, 9000); // Change font size after 9 seconds
+
+        setTimeout(() => {
+            fadingText.style.opacity = '0';
+        }, 11000); // Fade out after 11 seconds
     }
 
     // Add a click event listener to the unmute button
     unmuteButton.addEventListener('click', () => {
         if (isMuted) {
             // Unmute immediately
-            video.muted = false; // Set video.muted to false to unmute
+            video.muted = false;
         } else {
             // Mute immediately
             video.muted = true;
@@ -52,30 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
         updateButtonText();
     });
 
-
-video.addEventListener('loadeddata', function () {
-    // Show the text after a delay
-    setTimeout(() => {
-        fadeInText();
-    }, 7000); // 
-    
-    // Hide the text after another delay
-    setTimeout(() => {
-        fadeOutText();
-    }, 9000); //
-});
-
-document.addEventListener('visibilitychange', function() {
-    if (document.hidden) {
-        // Page is not active, pause animations and video here
-        fadingText.style.animationPlayState = 'paused';
-        video.pause();
-    } else {
-        // Page is active again, resume animations and video here
-        fadingText.style.animationPlayState = 'running';
-        video.play();
-    }
-});
-
-
+    // Show and animate the text after a delay
+    animateText();
 });

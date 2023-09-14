@@ -77,27 +77,7 @@ body {
   text-shadow: 0px 0px 20px rgba(128, 0, 128, 0.5); /* Strong blurry shadow */
   font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with your preferred font */
   opacity: 0; /* Set initial opacity to 0 */
-  animation: fadeinout 14s cubic-bezier(0.80, 0, 0.300, 1) 3s forwards;
 }
-
-@keyframes fadeinout {
-  0%, 100% {
-    opacity: 0;
-    text-shadow: 0px 0px 20px rgba(128, 0, 128, 0.5); /* Strong blurry shadow */
-    font-size: 72px; /* Biggest font size */
-  }
-  10%, 80% {
-    opacity: 1;
-    text-shadow: 0px 0px 20px rgba(128, 0, 128, 0.5); /* Strong blurry shadow */
-    font-size: 48px; /* Medium font size */
-  }
-  90% {
-    opacity: 0;
-    text-shadow: 0px 0px 20px rgba(128, 0, 128, 0); /* Fully transparent shadow */
-    font-size: 24px; /* Smallest font size */
-  }
-}
-
 
 footer {
   position: fixed;
