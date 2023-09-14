@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () {
+$(document).ready(function() {
     // Get the video element
-    const video = document.getElementById('background-video');
+    const video = $('#background-video')[0]; // Use [0] to access the DOM element
 
     // Get the unmute button
-    const unmuteButton = document.getElementById('unmute-button');
+    const unmuteButton = $('#unmute-button');
 
     // Get the fading text element
-    const fadingText = document.getElementById('fading-text');
+    const fadingText = $('#fading-text');
 
     // Flag to track mute/unmute state
     let isMuted = true;
@@ -14,37 +14,44 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to update the button text
     function updateButtonText() {
         if (isMuted) {
-            unmuteButton.innerText = 'Unmute';
+            unmuteButton.text('Unmute');
         } else {
-            unmuteButton.innerText = 'Mute';
+            unmuteButton.text('Mute');
         }
     }
 
     // Function to animate the fading text
     function animateText() {
         // Set the initial styles
-        fadingText.style.opacity = '0';
-        fadingText.style.textShadow = '0px 0px 20px rgba(128, 0, 128, 0.5)';
-        fadingText.style.fontSize = '72px';
-        fadingText.style.transition = 'opacity 1s ease, font-size 3s ease';
+        fadingText.css('opacity', '0');
+        fadingText.css('text-shadow', '0px 0px 20px rgba(128, 0, 128, 0.5)');
+        fadingText.css('font-size', '92px');
+        fadingText.css('transform', 'translate(-50%, -50%) scale(1)');
+        fadingText.css('transform-origin', '50% 50%');
 
-        // Start the animation
-        setTimeout(() => {
-            fadingText.style.opacity = '1';
-            fadingText.style.fontSize = '48px';
-        }, 3000); // Fade in and change font size after 3 seconds
-
-        setTimeout(() => {
-            fadingText.style.fontSize = '24px';
-        }, 9000); // Change font size after 9 seconds
-
-        setTimeout(() => {
-            fadingText.style.opacity = '0';
-        }, 11000); // Fade out after 11 seconds
+        setTimeout(function() {
+            fadingText.animate({
+                opacity: 1,
+                fontSize: '64px',
+                transform: 'translate(-50%, -50%) scale(1.3)'
+            }, 2500, 'easeInQuart', function() {
+                // Animation complete
+                fadingText.animate({
+                    fontSize: '64px'
+                }, 10000, 'easeInOutCubic', function() {
+                    // Animation complete
+                    fadingText.animate({
+                        opacity: 0,
+                        fontSize: '18px',
+                        transform: 'translate(-50%, -50%) scale(1.2)'
+                    }, 500, 'easeInOutCubic');
+                });
+            });
+        }, 2000);
     }
 
     // Add a click event listener to the unmute button
-    unmuteButton.addEventListener('click', () => {
+    unmuteButton.on('click', function() {
         if (isMuted) {
             // Unmute immediately
             video.muted = false;
