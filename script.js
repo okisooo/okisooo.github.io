@@ -65,4 +65,17 @@ video.addEventListener('loadeddata', function () {
     }, 9000); //
 });
 
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        // Page is not active, pause animations and video here
+        fadingText.style.animationPlayState = 'paused';
+        video.pause();
+    } else {
+        // Page is active again, resume animations and video here
+        fadingText.style.animationPlayState = 'running';
+        video.play();
+    }
+});
+
+
 });
