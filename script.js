@@ -29,7 +29,9 @@ $(document).ready(function() {
         fadingText.css('transform', 'translate(-50%, -50%) scale(1)');
         fadingText.css('transform-origin', '50% 50%');
 
-        setTimeout(function() {
+        // Start the video and then start the animation
+        video.addEventListener('play', function() {
+            // Start the animation
             fadingText.animate({
                 opacity: 1,
                 fontSize: '64px',
@@ -47,25 +49,28 @@ $(document).ready(function() {
                     }, 500, 'easeInOutCubic');
                 });
             });
-        }, 2000);
+        });
+
+        // Add a click event listener to the unmute button
+        unmuteButton.on('click', function() {
+            if (isMuted) {
+                // Unmute immediately
+                video.muted = false;
+            } else {
+                // Mute immediately
+                video.muted = true;
+            }
+
+            // Toggle mute state
+            isMuted = !isMuted;
+
+            // Update the button text
+            updateButtonText();
+        });
+
+        // Start the video
+        video.play();
     }
-
-    // Add a click event listener to the unmute button
-    unmuteButton.on('click', function() {
-        if (isMuted) {
-            // Unmute immediately
-            video.muted = false;
-        } else {
-            // Mute immediately
-            video.muted = true;
-        }
-
-        // Toggle mute state
-        isMuted = !isMuted;
-
-        // Update the button text
-        updateButtonText();
-    });
 
     // Show and animate the text after a delay
     animateText();
