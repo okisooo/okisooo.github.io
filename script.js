@@ -42,27 +42,28 @@ $(document).ready(function() {
         fadingText.css('transform', 'translate(-50%, -50%) scale(1)');
         fadingText.css('transform-origin', '50% 50%');
 
-        // Start the video and then start the animation
         video.addEventListener('play', function() {
-            // Start the animation
-            fadingText.animate({
+            setTimeout(function() {
+              // Start the animation
+              fadingText.animate({
                 opacity: 1,
                 fontSize: '64px',
                 transform: 'translate(-50%, -50%) scale(1.3)'
-            }, 2500, 'easeInQuart', function() {
+              }, 2500, 'easeInQuart', function() {
                 // Animation complete
                 fadingText.animate({
-                    fontSize: '64px'
+                  fontSize: '64px'
                 }, 10000, 'easeInOutCubic', function() {
-                    // Animation complete
-                    fadingText.animate({
-                        opacity: 0,
-                        fontSize: '18px',
-                        transform: 'translate(-50%, -50%) scale(1.2)'
-                    }, 500, 'easeInOutCubic');
+                  // Animation complete
+                  fadingText.animate({
+                    opacity: 0,
+                    fontSize: '18px',
+                    transform: 'translate(-50%, -50%) scale(1.2)'
+                  }, 500, 'easeInOutCubic');
                 });
-            });
-        });
+              });
+            }, 2000); // Delay the animation by 2000 milliseconds (2 seconds)
+          });
 
         // Add a click event listener to the unmute button
         unmuteButton.on('click', function() {
