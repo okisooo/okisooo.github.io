@@ -11,9 +11,6 @@ $(document).ready(function() {
   // Flag to track mute/unmute state
   let isMuted = true;
 
-  // Flag to track whether the video has been unmuted on first hover
-  let isFirstHover = true;
-
   // Function to update the button text
   function updateButtonText() {
     if (isMuted) {
@@ -32,24 +29,26 @@ $(document).ready(function() {
     fadingText.css('transform', 'translate(-50%, -50%) scale(1)');
     fadingText.css('transform-origin', '50% 50%');
 
-    // Start the animation after a 2-second delay
-    setTimeout(function() {
-      // Start the animation
-      fadingText.animate({
-        opacity: 1,
-        fontSize: '64px',
-        transform: 'translate(-50%, -50%) scale(1.3)'
-      }, 2500, 'easeInOutCubic', function() {
-        // Animation complete
+    // Start the video and then start the animation after a 2-second delay
+    video.addEventListener('play', function() {
+      setTimeout(function() {
+        // Start the animation
         fadingText.animate({
-          fontSize: '64px'
-        }, 8500, 'easeInOutCubic', function() {
+          opacity: 1,
+          fontSize: '64px',
+          transform: 'translate(-50%, -50%) scale(1.3)'
+        }, 2500, 'easeInOutCubic', function() {
           // Animation complete
           fadingText.animate({
-            opacity: 0,
-            fontSize: '18px',
-            transform: 'translate(-50%, -50%) scale(1.2)'
-          }, 500, 'easeInOutCubic');
+            fontSize: '64px'
+          }, 8500, 'easeInOutCubic', function() {
+            // Animation complete
+            fadingText.animate({
+              opacity: 0,
+              fontSize: '18px',
+              transform: 'translate(-50%, -50%) scale(1.2)'
+            }, 500, 'easeInOutCubic');
+          });
         });
       }, 3500); // Delay the animation by 3500 milliseconds (3.5 seconds)
     });
