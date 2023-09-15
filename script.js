@@ -51,43 +51,30 @@ $(document).ready(function() {
             transform: 'translate(-50%, -50%) scale(1.2)'
           }, 500, 'easeInOutCubic');
         });
-      });
-    }, 2000); // Delay the animation by 2000 milliseconds (2 seconds)
+      }, 3500); // Delay the animation by 3500 milliseconds (3.5 seconds)
+    });
+
+    // Add a click event listener to the unmute button
+    unmuteButton.on('click', function() {
+      if (isMuted) {
+        // Unmute immediately
+        video.muted = false;
+      } else {
+        // Mute immediately
+        video.muted = true;
+      }
+
+      // Toggle mute state
+      isMuted = !isMuted;
+
+      // Update the button text
+      updateButtonText();
+    });
+
+    // Start the video
+    video.play();
   }
 
-  // Add a click event listener to the unmute button
-  unmuteButton.on('click', function() {
-    if (isMuted) {
-      // Unmute immediately
-      video.muted = false;
-    } else {
-      // Mute immediately
-      video.muted = true;
-    }
-
-    // Toggle mute state
-    isMuted = !isMuted;
-
-    // Update the button text
-    updateButtonText();
-  });
-
-  // Add an event listener for mouseenter to unmute the video on first hover
-  $(document).one('mouseenter', function() {
-    if (isFirstHover) {
-      if (isMuted) {
-        // Unmute immediately when the mouse enters the document for the first time
-        video.muted = false;
-        isMuted = false; // Update the mute state
-        updateButtonText(); // Update the button text after unmuting
-      }
-      isFirstHover = false; // Set isFirstHover to false to prevent further unmuting
-    }
-  });
-
-  // Start the video
-  video.play();
-
-  // Show and animate the text
+  // Show and animate the text after a delay
   animateText();
 });
