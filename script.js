@@ -20,6 +20,19 @@ $(document).ready(function() {
         }
     }
 
+
+    function handleVisibilityChange() {
+        if (document.hidden) {
+          // Page is not visible, stop the animation and remove the text
+          fadingText.stop(); // Stop the animation
+          fadingText.remove(); // Remove the text element
+        }
+      }
+      
+      // Add an event listener for visibility change
+      document.addEventListener('visibilitychange', handleVisibilityChange, false);
+      
+
     // Function to animate the fading text
     function animateText() {
         // Set the initial styles
@@ -75,45 +88,6 @@ $(document).ready(function() {
     // Show and animate the text after a delay
     animateText();
 
-// Function to check if the page is hidden
-function isPageHidden() {
-    return document.hidden || document.msHidden || document.webkitHidden || document.mozHidden;
-  }
-  
-  // Start the video and then start the animation after a 2-second delay
-  video.addEventListener('play', function() {
-    setTimeout(function() {
-      // Check if the page is hidden before starting the animation
-      if (!isPageHidden()) {
-        // Start the animation
-        fadingText.animate({
-          opacity: 1,
-          fontSize: '64px',
-          transform: 'translate(-50%, -50%) scale(1.3)'
-        }, 2500, 'easeInQuart', function() {
-          // Animation complete
-          fadingText.animate({
-            fontSize: '64px'
-          }, 10000, 'easeInOutCubic', function() {
-            // Animation complete
-            fadingText.animate({
-              opacity: 0,
-              fontSize: '18px',
-              transform: 'translate(-50%, -50%) scale(1.2)'
-            }, 500, 'easeInOutCubic');
-          });
-        });
-      }
-    }, 2000); // Delay the animation by 2000 milliseconds (2 seconds)
-  });
-  
-  // Listen for visibility change events
-  document.addEventListener("visibilitychange", function() {
-    // Check if the page is hidden and stop the animation if it's running
-    if (isPageHidden()) {
-      fadingText.stop(true, true).css('opacity', 0); // Stop the animation and hide the text
-    }
-  });
-  
 
+    
 });
