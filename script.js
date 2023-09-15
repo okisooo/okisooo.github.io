@@ -71,8 +71,10 @@ $(document).ready(function() {
     });
 
     // Start the video
-    video.play();
+
   }
+
+  video.play();
 
   // Show and animate the text after a delay
   animateText();
