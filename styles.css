@@ -4,6 +4,7 @@ body, html {
   padding: 0;
   background: linear-gradient(180deg, #800080, #4B0082, #DDA0DD);
   overflow: hidden;
+  font-family: 'Arial', sans-serif; /* Replace 'Your Desired Font' with your preferred font */
 }
 
 #video-container {
@@ -49,6 +50,22 @@ body, html {
   color: #881988;
   transform: scale(1.2);
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.big-text {
+  font-family: 'Arial', sans-serif; /* Change the font for big text */
+}
+
+#unmute-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
 
 footer {
