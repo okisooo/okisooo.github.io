@@ -44,7 +44,7 @@ body, html {
 }
 
 .fade-on-hover {
-  animation: fadeIn 3s ease-in-out forwards;
+  animation: fadeIn 7s ease-in-out forwards;
   transition: opacity 0.5s ease-in-out;
 }
 
