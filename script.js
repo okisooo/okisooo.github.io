@@ -17,9 +17,9 @@ window.onload = function() {
         clearInterval(fadeInterval);
         fadeInterval = setInterval(function() {
             if (direction === 'up' && video.volume < 1) {
-                video.volume += 0.1;
-            } else if (direction === 'down' && video.volume > 0.1) { // Ensure volume is within the range [0, 1]
-                video.volume -= 0.1;
+                video.volume = Math.min(video.volume + 0.1, 1);
+            } else if (direction === 'down' && video.volume > 0) {
+                video.volume = Math.max(video.volume - 0.1, 0);
             } else {
                 clearInterval(fadeInterval);
             }
