@@ -46,6 +46,7 @@ body, html {
 
 .fade-on-hover {
   transition: opacity 0.5s ease-in-out;
+  animation: fadeIn 7s ease-in-out forwards;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow to the text */
   font-size: 72px; /* Increase the font size */
   font-weight: bold; /* Make the text bold */
