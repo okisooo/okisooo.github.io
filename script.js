@@ -1,4 +1,4 @@
-$(document).ready(function() {
+window.onload = function() {
     const unmuteButton = $('#unmute-button');
     const video = document.getElementById('bgvid');
     let isMuted = video.muted;
@@ -28,4 +28,4 @@ $(document).ready(function() {
 
     // Initialize button text
     updateButtonText();
-});
+};
