@@ -12,16 +12,16 @@ $(document).ready(function() {
     }
 
     unmuteButton.on('click', function() {
-        if (isMuted) {
-            // Unmute immediately
-            video.muted = false;
-        } else {
-            // Mute immediately
-            video.muted = true;
-        }
-
         // Toggle mute state
         isMuted = !isMuted;
+
+        if (isMuted) {
+            // Mute immediately
+            video.muted = true;
+        } else {
+            // Unmute immediately
+            video.muted = false;
+        }
 
         updateButtonText();
     });
