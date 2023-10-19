@@ -1,6 +1,7 @@
 window.onload = function() {
     const unmuteButton = $('#unmute-button');
     const video = document.getElementById('bgvid');
+    video.volume = 0;
     let isMuted = video.muted;
     let fadeInterval;
 
