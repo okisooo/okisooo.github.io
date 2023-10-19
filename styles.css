@@ -39,6 +39,14 @@ body, html {
   opacity: 1;
 }
 
+.fade-on-hover {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-on-hover:hover {
+  opacity: 0;
+}
+
 #social-links {
   position: fixed;
   bottom: 20px;
