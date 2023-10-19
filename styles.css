@@ -2,7 +2,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, #800080, #4B0082, #DDA0DD);
+  background: linear-gradient(180deg, #912f91, #4B0082, #DDA0DD);
   overflow: hidden;
   font-family: 'Arial', sans-serif; /* Replace 'Your Desired Font' with your preferred font */
 }
