@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+<meta name="robots" content="noindex">
 <html>
   <head>
     <meta charset="UTF-8">
@@ -9,7 +11,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
-  </head>
+  <style id="jsbin-css">
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#container {
+  display: flex;
+  height: 100vh;
+}
+
+#left-tab {
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px 0 0 10px;
+  padding: 50px;
+  width: 20vw;
+  min-width: 200px;
+}
+
+#left-tab h1 {
+  font-size: 34px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#social-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-link {
+  margin-bottom: 10px;
+}
+
+.social-link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b2d8d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.social-link a:hover {
+  background-color: #82c7c7;
+}
+
+.social-link i {
+  margin-right: 10px;
+}
+
+#right-background {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#bgvid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#clock {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  font-size: 32px;
+  padding: 60px;
+  color: black;
+}
+</style>
+</head>
   <body>
     <div id="container">
       <div id="left-tab">
@@ -58,3 +141,21 @@
         <video playsinline autoplay muted loop id="bgvid">
           <source src="https://cdn.discordapp.com/attachments/1146559270427574354/1164621734092218458/raiden.mp4?ex=6543e183&is=65316c83&hm=040cf09d98d6b61096d73479e013f410b04562f9899e38178947bb29d3191c9c&" type="video/mp4">
         </video>
+      </div>
+    </div>
+  <script id="jsbin-javascript">
+const clock = document.getElementById("clock");
+
+function updateClock() {
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, "0");
+  const minutes = now.getMinutes().toString().padStart(2, "0");
+  const seconds = now.getSeconds().toString().padStart(2, "0");
+  clock.textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+</body>
+</html>
