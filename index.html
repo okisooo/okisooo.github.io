@@ -6,20 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-      const clock = document.getElementById("clock");
-
-      function updateClock() {
-        const now = new Date();
-        const hours = now.getHours().toString().padStart(2, "0");
-        const minutes = now.getMinutes().toString().padStart(2, "0");
-        const seconds = now.getSeconds().toString().padStart(2, "0");
-        clock.textContent = `${hours}:${minutes}:${seconds}`;
-      }
-
-      updateClock();
-      setInterval(updateClock, 1000);
-    </script>
+    <script src="script.js"></script>
   </head>
   <body>
     <div id="container">
