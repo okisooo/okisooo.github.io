@@ -6,7 +6,7 @@ function updateClock() {
   const minutes = now.getMinutes().toString().padStart(2, "0");
   const seconds = now.getSeconds().toString().padStart(2, "0");
   clock.textContent = `${hours}:${minutes}:${seconds}`;
-}
+}s
 
 updateClock();
 setInterval(updateClock, 1000);
