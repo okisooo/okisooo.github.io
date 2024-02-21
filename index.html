@@ -1,37 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="icon" href="favicon.ico" type="image/ico">
-    <title>oxoㆍオキソ</title>
-</head>
-<body>
-  <button id="unmute-button">Unmute</button>
-  <div id="video-container">
-    <video playsinline autoplay muted loop id="bgvid">
-      <source src="https://cdn.discordapp.com/attachments/1146559270427574354/1164621734092218458/raiden.mp4?ex=6543e183&is=65316c83&hm=040cf09d98d6b61096d73479e013f410b04562f9899e38178947bb29d3191c9c&" type="video/mp4">
-    </video>
-    <div id="text-container">
-      <h1 class="fade-on-hover">oxo</h1>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container">
+      <div id="left-tab">
+        <h1>oxo/okiso</h1>
+        <div id="social-links">
+          <div class="social-link">
+            <a href="https://www.twitch.tv/okiso7" target="_blank">
+              <i class="fab fa-twitch"></i>
+              <span>Twitch</span>
+            </a>
+          </div>
+          <div class="social-link">
+            <a href="https://discord.gg/oxo" target="_blank">
+              <i class="fab fa-discord"></i>
+              <span>Discord</span>
+            </a>
+          </div>
+          <div class="social-link">
+            <a href="https://twitter.com/okisooo_" target="_blank">
+              <i class="fab fa-twitter"></i>
+              <span>Twitter</span>
+            </a>
+          </div>
+          <div class="social-link">
+            <a href="https://www.instagram.com/okisooo_/" target="_blank">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </div>
+          <div class="social-link">
+            <a href="https://github.com/okisooo" target="_blank">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+          <div class="social-link">
+            <a href="https://steamcommunity.com/id/oxonet/" target="_blank">
+              <i class="fab fa-steam"></i>
+              <span>Steam</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="right-background">
+        <video playsinline autoplay muted loop id="bgvid">
+          <source src="https://cdn.discordapp.com/attachments/1146559270427574354/1164621734092218458/raiden.mp4?ex=6543e183&is=65316c83&hm=040cf09d98d6b61096d73479e013f410b04562f9899e38178947bb29d3191c9c&" type="video/mp4">
+        </video>
+      </div>
     </div>
-  </div>
-  <div id="social-links">
-    <!-- Add your social media links and icons here -->
-    <a href="https://www.twitch.tv/okiso7" class="social-icon" target="_blank"><i class="fab fa-twitch"></i></a>
-    <a href="https://discord.gg/oxo" class="social-icon" target="_blank"><i class="fab fa-discord"></i></a>
-    <a href="https://twitter.com/okisooo_" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/okisooo_/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://github.com/okisooo" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://steamcommunity.com/id/oxonet/" class="social-icon" target="_blank"><i class="fab fa-steam"></i></a>
-  </div>
-  <footer>
-    <p>&copy; oxo / okiso 2023</p>
-  </footer>
-  <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
