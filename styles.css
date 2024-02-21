@@ -95,6 +95,11 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: transparent; /* Remove background color */
+    }
+
+    .social-link a:hover {
+        background-color: transparent; /* Remove background color on hover */
     }
 
     .social-link i {
