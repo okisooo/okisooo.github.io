@@ -71,7 +71,7 @@ body {
 }
 
 #right-background img {
-    width: fit-content;
+    width: auto;
     height: 100%;
 }
 
