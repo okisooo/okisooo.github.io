@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <meta name="robots" content="noindex">
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oxonet.</title>
@@ -10,71 +9,57 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
 </head>
-  <body>
-    <div id="container">
-      <div id="left-tab">
+<body>
+<div id="container">
+    <div id="left-tab">
         <h1>
-          <span class="icon"></span> oxoㆍオキソ
-        </h1>        
+            <span id="discord-icon" class="icon"></span> oxoㆍオキソ
+        </h1>
         <div id="social-links">
-          <div class="social-link">
-            <a href="https://www.twitch.tv/okiso7" target="_blank">
-              <i class="fab fa-twitch"></i>
-              <span>Twitch</span>
-            </a>
-          </div>
-          <div class="social-link">
-            <a href="https://discord.gg/oxo" target="_blank">
-              <i class="fab fa-discord"></i>
-              <span>Discord</span>
-            </a>
-          </div>
-          <div class="social-link">
-            <a href="https://twitter.com/okisooo_" target="_blank">
-              <i class="fab fa-twitter"></i>
-              <span>Twitter</span>
-            </a>
-          </div>
-          <div class="social-link">
-            <a href="https://www.instagram.com/okisooo_/" target="_blank">
-              <i class="fab fa-instagram"></i>
-              <span>Instagram</span>
-            </a>
-          </div>
-          <div class="social-link">
-            <a href="https://github.com/okisooo" target="_blank">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-          </div>
-          <div class="social-link">
-            <a href="https://steamcommunity.com/id/oxonet/" target="_blank">
-              <i class="fab fa-steam"></i>
-              <span>Steam</span>
-            </a>
-          </div>
-          <div id="clock"></div>
+            <div class="social-link">
+                <a href="https://www.twitch.tv/okiso7" target="_blank">
+                    <i class="fab fa-twitch"></i>
+                    <span>Twitch</span>
+                </a>
+            </div>
+            <div class="social-link">
+                <a href="https://discord.gg/oxo" target="_blank">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+            </div>
+            <div class="social-link">
+                <a href="https://twitter.com/okisooo_" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+            </div>
+            <div class="social-link">
+                <a href="https://www.instagram.com/okisooo_/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+            <div class="social-link">
+                <a href="https://github.com/okisooo" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+            <div class="social-link">
+                <a href="https://steamcommunity.com/id/oxonet/" target="_blank">
+                    <i class="fab fa-steam"></i>
+                    <span>Steam</span>
+                </a>
+            </div>
+            <div id="clock"></div>
         </div>
-      </div>
-      <div id="right-background">
-        <img src="frieren.jpg" alt="Background Image">
-      </div>
     </div>
-  <script id="jsbin-javascript">
-const clock = document.getElementById("clock");
-
-function updateClock() {
-  const now = new Date();
-  const hours = now.getHours().toString().padStart(2, "0");
-  const minutes = now.getMinutes().toString().padStart(2, "0");
-  const seconds = now.getSeconds().toString().padStart(2, "0");
-  clock.textContent = `${hours}:${minutes}:${seconds}`;
-}
-
-updateClock();
-setInterval(updateClock, 1000);
-</script>
+    <div id="right-background">
+        <img src="frieren.jpg" alt="Background Image">
+    </div>
+</div>
+<script src="script.js"></script> <!-- Include the external JavaScript file -->
 </body>
 </html>

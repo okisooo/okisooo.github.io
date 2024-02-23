@@ -28,12 +28,10 @@ body {
 #left-tab h1 .icon {
     width: 30px; /* Adjust the width of the icon */
     height: 30px; /* Adjust the height of the icon */
-    background-image: url('path_to_your_image_file.png'); /* Set the path to your image file */
     background-size: cover; /* Ensure the image covers the entire area of the icon */
     margin-right: 10px; /* Adjust the spacing between the icon and the text */
     border-radius: 50%; /* Make the icon round */
 }
-
 
 #social-links {
     display: flex;
@@ -72,13 +70,9 @@ body {
     z-index: -1;
 }
 
-#bgvid {
-    position: absolute;
-    top: 0;
-    left: 0;
+#right-background img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
 }
 
 #clock {
@@ -89,4 +83,3 @@ body {
     padding: 60px;
     color: black;
 }
-
