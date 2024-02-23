@@ -9,6 +9,10 @@ function fetchDiscordProfilePicture(userId) {
             // Update the Discord icon with the fetched profile picture
             const discordIcon = document.getElementById("discord-icon");
             discordIcon.style.backgroundImage = `url('${profilePictureUrl}')`;
+
+            // Update favicon
+            const favicon = document.querySelector("link[rel='icon']");
+            favicon.href = profilePictureUrl; // Assuming the profile picture URL is the desired favicon
         })
         .catch(error => console.error('Error fetching Discord profile picture:', error));
 }
