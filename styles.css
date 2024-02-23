@@ -71,8 +71,8 @@ body {
 }
 
 #right-background img {
-    width: 100%;
-    height: fit-content;
+    width: auto;
+    height: 100%;
 }
 
 #clock {
