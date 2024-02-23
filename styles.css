@@ -67,7 +67,7 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
-    z-index: -99;
+    z-index: -1;
 }
 
 #right-background img {
