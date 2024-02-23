@@ -68,6 +68,7 @@ body {
     width: 100%;
     overflow: hidden;
     z-index: -1;
+    left: -50px; /* Adjust the value to move the image to the left */
 }
 
 #right-background img {
