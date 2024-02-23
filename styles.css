@@ -25,10 +25,15 @@ body {
     align-items: center; /* Center the icon vertically */
 }
 
-#left-tab h1 i {
+#left-tab h1 .icon {
+    width: 30px; /* Adjust the width of the icon */
+    height: 30px; /* Adjust the height of the icon */
+    background-image: url('path_to_your_image_file.png'); /* Set the path to your image file */
+    background-size: cover; /* Ensure the image covers the entire area of the icon */
     margin-right: 10px; /* Adjust the spacing between the icon and the text */
-    color: #82c7c7; /* Change the color of the icon */
+    border-radius: 50%; /* Make the icon round */
 }
+
 
 #social-links {
     display: flex;
