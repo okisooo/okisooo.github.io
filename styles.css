@@ -17,21 +17,6 @@ body {
     min-width: 200px;
 }
 
-@keyframes fadeLeftToRight {
-    0% {
-        background-position: -100% 0;
-    }
-    100% {
-        background-position: 100% 0;
-    }
-}
-
-#left-tab {
-    animation: fadeLeftToRight 2s ease-out forwards;
-    background: linear-gradient(90deg, transparent, currentColor);
-    background-size: 200% 100%;
-}
-
 #left-tab h1 {
     font-size: 34px;
     margin-top: 0;
@@ -92,7 +77,7 @@ body {
     width: 100%;
     overflow: hidden;
     z-index: -1;
-    animation: unblur 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: unblur 2s ease-out forwards;
 }
 
 #right-background img {
