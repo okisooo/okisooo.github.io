@@ -107,6 +107,7 @@ body {
     #right-background {
         position: absolute;
         top: 0;
-        left: 0;
+        height: 100vh; /* Set the height to 100% of the viewport height */
+        overflow: hidden; /* Hide any excess */
     }
 }
