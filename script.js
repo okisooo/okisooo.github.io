@@ -34,4 +34,10 @@ fetchDiscordProfilePicture("274178934143451137"); // Replace with the actual Dis
 updateClock();
 setInterval(updateClock, 1000);
 
-
+window.onload = function() {
+    setTimeout(function() {
+        const leftTab = document.getElementById('left-tab');
+        leftTab.style.opacity = '1'; /* Fade in the tab */
+        leftTab.style.filter = 'blur(0)'; /* Unblur the tab */
+    }, 300); /* Delay of 2 seconds */
+};

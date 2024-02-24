@@ -9,12 +9,15 @@ body {
 }
 
 #left-tab {
-    background-color: transparent;
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 10px 0 0 10px;
+    border-radius: 10px;
     padding: 50px;
     width: 20vw;
     min-width: 200px;
+    opacity: 0; /* Initially hide the tab */
+    transition: opacity 2s, filter 2s; /* Transition effect for fading in and blurring */
+    filter: blur(10px); /* Initially blur the tab */
 }
 
 #left-tab h1 {
@@ -82,4 +85,28 @@ body {
     font-size: 32px;
     padding: 60px;
     color: black;
+}
+
+/* New styles for mobile screens */
+@media (max-width: 768px) {
+    #left-tab {
+        width: 80%; /* Adjust the width of the tab */
+        min-width: 0;
+        max-width: 300px; /* Adjust the maximum width of the tab */
+        position: absolute; /* Position the tab absolutely */
+        top: 50%; /* Center the tab vertically */
+        left: 50%; /* Center the tab horizontally */
+        transform: translate(-50%, -50%); /* Offset the tab by half its width and height to truly center it */
+        border-radius: 20px; /* Increase the border radius to make it look more like a bubble */
+    }
+  
+    #clock {
+        display: none; /* Hide the clock on mobile screens */
+    }
+
+    #right-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
