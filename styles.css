@@ -64,7 +64,7 @@ body {
 }
 
 @keyframes unblur {
-    50% {
+    0% {
         filter: blur(6px);
     }
     100% {
