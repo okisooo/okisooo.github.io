@@ -65,7 +65,7 @@ body {
 
 @keyframes unblur {
     0% {
-        filter: blur(6px);
+        filter: blur(5px);
     }
     100% {
         filter: blur(0);
@@ -73,7 +73,7 @@ body {
 }
 
 #right-background {
-    animation: unblur 1.5s cubic-bezier(0.4, 0, 1, 1) forwards;
+    animation: unblur 0.5s ease-out forwards;
 }
 
 #right-background {
