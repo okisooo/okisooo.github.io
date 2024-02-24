@@ -72,6 +72,13 @@ body {
     }
 }
 
+#left-tab {
+    position: absolute;
+    left: -100%;  /* Initially position the left tab out of the frame */
+    transition: left 2s ease-out;  /* Define a transition on the left property */
+    /* rest of your styles */
+}
+
 #right-background {
     position: relative;
     width: 100%;

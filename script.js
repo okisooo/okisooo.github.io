@@ -33,3 +33,7 @@ fetchDiscordProfilePicture("274178934143451137"); // Replace with the actual Dis
 // Call the function to update the clock every second
 updateClock();
 setInterval(updateClock, 1000);
+
+window.onload = function() {
+    document.getElementById('left-tab').style.left = '0';  /* Move the left tab into the frame when the page loads */
+};
