@@ -15,6 +15,7 @@ body {
     padding: 50px;
     width: 20vw;
     min-width: 200px;
+    transition: opacity 2s; /* Transition effect for fading in */
 }
 
 #left-tab h1 {
@@ -82,4 +83,19 @@ body {
     font-size: 32px;
     padding: 60px;
     color: black;
+}
+
+/* New styles for mobile screens */
+@media (max-width: 768px) {
+    #left-tab {
+        width: 100%;
+        min-width: 0;
+        opacity: 0; /* Initially hide the tab on mobile screens */
+    }
+
+    #right-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
