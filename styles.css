@@ -63,11 +63,21 @@ body {
     margin-right: 10px;
 }
 
+@keyframes unblur {
+    0% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+
 #right-background {
     position: relative;
     width: 100%;
     overflow: hidden;
     z-index: -1;
+    animation: unblur 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 #right-background img {
