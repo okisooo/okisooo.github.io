@@ -63,19 +63,6 @@ body {
     margin-right: 10px;
 }
 
-@keyframes unblur {
-    0% {
-        filter: blur(5px);
-    }
-    100% {
-        filter: blur(0);
-    }
-}
-
-#right-background {
-    animation: unblur 0.5s ease-out forwards;
-}
-
 #right-background {
     position: relative;
     width: 100%;
