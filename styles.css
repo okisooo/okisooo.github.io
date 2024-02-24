@@ -73,7 +73,7 @@ body {
 }
 
 #right-background {
-    animation: unblur 2s cubic-bezier(0.4, 0, 1, 1) forwards;
+    animation: unblur 1.5s cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 #right-background {
