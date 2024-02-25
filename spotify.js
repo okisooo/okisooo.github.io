@@ -74,4 +74,4 @@ function displayCurrentlyPlaying() {
 }
 
 // Call the function when the script loads
-displayCurrentlyPlaying();
+window.onload = displayCurrentlyPlaying();
