@@ -113,7 +113,7 @@ body {
 
     #right-background img {
         object-fit: cover; /* Ensure the image covers the entire container */
-        object-position: -420px 0; /* Adjust the position of the image */
+        object-position: -450px 0; /* Adjust the position of the image */
     }
 
 }
