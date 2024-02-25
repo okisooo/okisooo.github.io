@@ -44,24 +44,22 @@ app.get('/currently-playing', (req, res) => {
 app.listen(3000, () => console.log('Server is running on port 3000'));
 
 // Client-side code to fetch and display the currently playing track
-function fetchCurrentlyPlaying() {
-    return fetch('/currently-playing')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            const trackName = data.item.name;
-            const artistName = data.item.artists[0].name;
-
-            return {
-                trackName: trackName,
-                artistName: artistName
-            };
-        })
-        .catch(error => console.error('Error fetching currently playing track:', error));
+async function fetchCurrentlyPlaying() {
+    try {
+        const response = await fetch('/currently-playing');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        const trackName = data.item.name;
+        const artistName = data.item.artists[0].name;
+        return {
+            trackName: trackName,
+            artistName: artistName
+        };
+    } catch (error) {
+        return console.error('Error fetching currently playing track:', error);
+    }
 }
 
 function displayCurrentlyPlaying() {
