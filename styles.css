@@ -90,14 +90,14 @@ body {
 /* New styles for mobile screens */
 @media (max-width: 768px) {
     #left-tab {
-        width: 80%; /* Adjust the width of the tab */
+        width: 67%; /* Adjust the width of the tab */
         min-width: 0;
         max-width: 300px; /* Adjust the maximum width of the tab */
         position: absolute; /* Position the tab absolutely */
         top: 50%; /* Center the tab vertically */
         left: 50%; /* Center the tab horizontally */
         transform: translate(-50%, -50%); /* Offset the tab by half its width and height to truly center it */
-        border-radius: 20px; /* Increase the border radius to make it look more like a bubble */
+        border-radius: 30px; /* Increase the border radius to make it look more like a bubble */
     }
   
     #clock {
@@ -110,4 +110,10 @@ body {
         height: 100vh; /* Set the height to 100% of the viewport height */
         overflow: hidden; /* Hide any excess */
     }
+
+    #right-background img {
+        object-fit: cover; /* Ensure the image covers the entire container */
+        object-position: -900px 0; /* Offset the image 50px to the left */
+    }
+
 }
