@@ -98,6 +98,10 @@ body {
         left: 50%; /* Center the tab horizontally */
         transform: translate(-50%, -50%); /* Offset the tab by half its width and height to truly center it */
         border-radius: 30px; /* Increase the border radius to make it look more like a bubble */
+        animation: sparkle 5s ease-in-out infinite;
+        border: 2px solid transparent;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
     }
   
     #clock {
@@ -114,6 +118,21 @@ body {
     #right-background img {
         object-fit: cover; /* Ensure the image covers the entire container */
         object-position: -477px 0; /* Adjust the position of the image */
+    }
+
+    @keyframes sparkle {
+        0% {
+            border-color: rgba(255, 215, 0, 0.5);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        50% {
+            border-color: rgba(255, 105, 180, 0.5);
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.5), 0 0 25px rgba(255, 105, 180, 0.5);
+        }
+        100% {
+            border-color: rgba(255, 215, 0, 0.5);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.5);
+        }
     }
 
 }
