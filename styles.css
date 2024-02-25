@@ -113,7 +113,7 @@ body {
 
     #right-background img {
         object-fit: cover; /* Ensure the image covers the entire container */
-        object-position: -200px 0; /* Offset the image 50px to the left */
+        object-position: -0px 0; /* Adjust the position of the image */
     }
 
 }
