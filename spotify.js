@@ -41,8 +41,8 @@ async function fetchCurrentlyPlaying(accessToken) {
 }
 
 window.onload = async function() {
-    const clientId = process.env.SPOTIFY_ID;  // Replace with your actual client ID
-    const clientSecret = process.env.SPOTIFY_SECRET;  // Replace with your actual client secret
+    const clientId = secrets.SPOTIFY_ID;  // Replace with your actual client ID
+    const clientSecret = secrets.SPOTIFY_SECRET;  // Replace with your actual client secret
     const accessToken = await getAccessToken(clientId, clientSecret);
 
     if (accessToken) {
