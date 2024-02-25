@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const express = require('express');
+import fetch from 'node-fetch';
+import express from 'express';
 const app = express();
 
 // Middleware to fetch the currently playing track
