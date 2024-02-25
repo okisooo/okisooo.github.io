@@ -1,4 +1,25 @@
 // spotify.js
+async function getAccessToken(clientId, clientSecret) {
+    const response = await fetch('https://accounts.spotify.com/api/token', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret),
+        },
+        body: new URLSearchParams({
+            'grant_type': 'client_credentials',
+        }),
+    });
+
+    if (response.ok) {
+        const data = await response.json();
+        return data.access_token;
+    } else {
+        console.error('Failed to get access token:', response);
+        return null;
+    }
+}
+
 async function fetchCurrentlyPlaying(accessToken) {
     const response = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
         headers: { 'Authorization': `Bearer ${accessToken}` },
@@ -19,16 +40,20 @@ async function fetchCurrentlyPlaying(accessToken) {
     }
 }
 
-const accessToken = 'your-access-token';  // Replace with your actual access token
-
 window.onload = async function() {
-    const currentlyPlaying = await fetchCurrentlyPlaying(accessToken);
+    const clientId = process.env.SPOTIFY_ID;  // Replace with your actual client ID
+    const clientSecret = process.env.SPOTIFY_SECRET;  // Replace with your actual client secret
+    const accessToken = await getAccessToken(clientId, clientSecret);
 
-    if (currentlyPlaying) {
-        document.getElementById('album-art').src = currentlyPlaying.image;
-        document.getElementById('track-name').textContent = currentlyPlaying.name;
-        document.getElementById('artist-name').textContent = currentlyPlaying.artist;
-        document.getElementById('album-name').textContent = currentlyPlaying.album;
-        document.getElementById('spotify-link').href = currentlyPlaying.url;
+    if (accessToken) {
+        const currentlyPlaying = await fetchCurrentlyPlaying(accessToken);
+
+        if (currentlyPlaying) {
+            document.getElementById('album-art').src = currentlyPlaying.image;
+            document.getElementById('track-name').textContent = currentlyPlaying.name;
+            document.getElementById('artist-name').textContent = currentlyPlaying.artist;
+            document.getElementById('album-name').textContent = currentlyPlaying.album;
+            document.getElementById('spotify-link').href = currentlyPlaying.url;
+        }
     }
 };
