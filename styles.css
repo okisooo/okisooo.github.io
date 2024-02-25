@@ -11,13 +11,14 @@ body {
 #left-tab {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
     padding: 50px;
     width: 20vw;
     min-width: 200px;
     opacity: 0; /* Initially hide the tab */
     transition: opacity 2s, filter 2s; /* Transition effect for fading in and blurring */
     filter: blur(10px); /* Initially blur the tab */
+    animation: sparkle 5s ease-in-out infinite;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 #left-tab h1 {
@@ -87,6 +88,21 @@ body {
     color: black;
 }
 
+    @keyframes sparkle {
+        0% {
+            border-color: rgba(120, 183, 255, 0.349);
+            box-shadow: 0 0 10px rgba(139, 141, 255, 0.5), 0 0 20px rgba(131, 184, 233, 0.5);
+        }
+        50% {
+            border-color: rgba(255, 105, 180, 0.5);
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.5), 0 0 25px rgba(255, 105, 180, 0.5);
+        }
+        100% {
+            border-color: rgba(73, 234, 255, 0.5);
+            box-shadow: 0 0 10px rgba(135, 247, 255, 0.5), 0 0 20px rgba(94, 255, 247, 0.5);
+        }
+    }
+
 /* New styles for mobile screens */
 @media (max-width: 768px) {
     #left-tab {
@@ -98,9 +114,7 @@ body {
         left: 50%; /* Center the tab horizontally */
         transform: translate(-50%, -50%); /* Offset the tab by half its width and height to truly center it */
         border-radius: 30px; /* Increase the border radius to make it look more like a bubble */
-        animation: sparkle 5s ease-in-out infinite;
         border: 2px solid transparent;
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     
     }
   
@@ -118,21 +132,6 @@ body {
     #right-background img {
         object-fit: cover; /* Ensure the image covers the entire container */
         object-position: -477px 0; /* Adjust the position of the image */
-    }
-
-    @keyframes sparkle {
-        0% {
-            border-color: rgba(120, 183, 255, 0.349);
-            box-shadow: 0 0 10px rgba(139, 141, 255, 0.5), 0 0 20px rgba(131, 184, 233, 0.5);
-        }
-        50% {
-            border-color: rgba(255, 105, 180, 0.5);
-            box-shadow: 0 0 15px rgba(255, 105, 180, 0.5), 0 0 25px rgba(255, 105, 180, 0.5);
-        }
-        100% {
-            border-color: rgba(73, 234, 255, 0.5);
-            box-shadow: 0 0 10px rgba(135, 247, 255, 0.5), 0 0 20px rgba(94, 255, 247, 0.5);
-        }
     }
 
 }
