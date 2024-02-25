@@ -1,75 +1,34 @@
-import fetch from "node-fetch"
-const express = require('express');
-const app = express();
-
-// Middleware to fetch the currently playing track
-app.use(async (req, res, next) => {
-    const clientId = process.env.SPOTIFY_CLIENT_ID;
-    const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
-    const apiUrl = 'https://accounts.spotify.com/api/token';
-
-    // Request access token from Spotify
-    const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': 'Basic ' + (new Buffer.from(clientId + ':' + clientSecret).toString('base64')),
-        },
-        body: 'grant_type=client_credentials'
+// spotify.js
+async function fetchCurrentlyPlaying(accessToken) {
+    const response = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
+        headers: { 'Authorization': `Bearer ${accessToken}` },
     });
 
-    const data = await response.json();
-    const accessToken = data.access_token;
-
-    // Use the access token to get the currently playing track
-    const currentlyPlayingResponse = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
-        headers: {
-            'Authorization': 'Bearer ' + accessToken
-        }
-    });
-
-    const currentlyPlayingData = await currentlyPlayingResponse.json();
-
-    // Attach the currently playing track to the request object
-    req.currentlyPlaying = currentlyPlayingData;
-
-    next();
-});
-
-// Route to return the currently playing track as JSON
-app.get('/currently-playing', (req, res) => {
-    res.json(req.currentlyPlaying);
-});
-
-app.listen(3000, () => console.log('Server is running on port 3000'));
-
-// Client-side code to fetch and display the currently playing track
-async function fetchCurrentlyPlaying() {
-    try {
-        const response = await fetch('/currently-playing');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+    if (response.ok) {
         const data = await response.json();
-        const trackName = data.item.name;
-        const artistName = data.item.artists[0].name;
         return {
-            trackName: trackName,
-            artistName: artistName
+            name: data.item.name,
+            artist: data.item.artists[0].name,
+            album: data.item.album.name,
+            image: data.item.album.images[0].url,
+            url: data.item.external_urls.spotify,
         };
-    } catch (error) {
-        return console.error('Error fetching currently playing track:', error);
+    } else {
+        console.error('Failed to fetch currently playing track:', response);
+        return null;
     }
 }
 
-function displayCurrentlyPlaying() {
-    fetchCurrentlyPlaying()
-        .then(currentlyPlaying => {
-            const currentlyPlayingElement = document.getElementById('currently-playing');
-            currentlyPlayingElement.textContent = `Currently playing: ${currentlyPlaying.trackName} by ${currentlyPlaying.artistName}`;
-        })
-        .catch(error => console.error('Error displaying currently playing track:', error));
-}
+const accessToken = 'your-access-token';  // Replace with your actual access token
 
-// Call the function when the script loads
-window.onload = displayCurrentlyPlaying();
+window.onload = async function() {
+    const currentlyPlaying = await fetchCurrentlyPlaying(accessToken);
+
+    if (currentlyPlaying) {
+        document.getElementById('album-art').src = currentlyPlaying.image;
+        document.getElementById('track-name').textContent = currentlyPlaying.name;
+        document.getElementById('artist-name').textContent = currentlyPlaying.artist;
+        document.getElementById('album-name').textContent = currentlyPlaying.album;
+        document.getElementById('spotify-link').href = currentlyPlaying.url;
+    }
+};
