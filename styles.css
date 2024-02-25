@@ -98,8 +98,8 @@ body {
             box-shadow: 0 0 15px rgba(255, 105, 180, 0.5), 0 0 25px rgba(255, 105, 180, 0.5);
         }
         100% {
-            border-color: rgba(73, 234, 255, 0.5);
-            box-shadow: 0 0 10px rgba(135, 247, 255, 0.5), 0 0 20px rgba(94, 255, 247, 0.5);
+            border-color: rgba(120, 183, 255, 0.349);
+            box-shadow: 0 0 10px rgba(139, 141, 255, 0.5), 0 0 20px rgba(131, 184, 233, 0.5);
         }
     }
 
