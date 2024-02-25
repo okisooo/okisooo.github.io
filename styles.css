@@ -29,10 +29,10 @@ body {
 }
 
 #left-tab h1 .icon {
-    width: 30px; /* Adjust the width of the icon */
-    height: 30px; /* Adjust the height of the icon */
+    width: 32px; /* Adjust the width of the icon */
+    height: 32px; /* Adjust the height of the icon */
     background-size: cover; /* Ensure the image covers the entire area of the icon */
-    margin-right: 10px; /* Adjust the spacing between the icon and the text */
+    margin-right: 15px; /* Adjust the spacing between the icon and the text */
     border-radius: 50%; /* Make the icon round */
 }
 
