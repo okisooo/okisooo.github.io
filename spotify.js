@@ -4,8 +4,8 @@ const app = express();
 
 // Middleware to fetch the currently playing track
 app.use(async (req, res, next) => {
-    const clientId = '61c77fc8156949aa98505e8236ffe105';
-    const clientSecret = '654424811715454391c75dc205fd9a73';
+    const clientId = process.env.SPOTIFY_CLIENT_ID;
+    const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
     const apiUrl = 'https://accounts.spotify.com/api/token';
 
     // Request access token from Spotify
